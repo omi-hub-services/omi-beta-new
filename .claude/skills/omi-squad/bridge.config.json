@@ -1,0 +1,5 @@
+{
+  "distribution": "Ubuntu-24.04",
+  "repository": "/home/ttin/beta/omi-beta-new",
+  "shim": "/home/ttin/beta/omi-beta-new/.omi-squad/bin/omi"
+}
