@@ -29,3 +29,16 @@ checks:
   project-check:
     command: [npm, test]
     timeout_seconds: 600
+deploy:
+  workflow: deploy.yml
+  tag_ref: deploy-r1
+  workflow_sha: 799ef5cade1b286905fed94c6c80db9c7fb1d1c7
+  issue_number: 30
+  allowed_actors: [ttin-omihub]
+  author_actor: minibox-claude-code
+  allowed_repositories: [omi-hub-services/omi-beta-new]
+  allowed_environments: [beta]
+deploy_targets:
+  - id: beta-r1
+    target_environment: beta
+    artifact_digest: sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
