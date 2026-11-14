@@ -6,7 +6,10 @@ const { pathToFileURL } = require("node:url");
 const distribution = "Ubuntu-24.04";
 const project = Buffer.from("L2hvbWUvdHRpbi9iZXRhL29taS1iZXRhLW5ldw==", "base64").toString("utf8");
 const args = process.argv.slice(2);
-if (args[0] === "session" && args[1] === "start") {
+if (/^--omi-(?:runtime|node-version|worker-version)$/.test(args[0] ?? "")) {
+  process.stderr.write("Internal launcher modes are not available from Windows.\n");
+  process.exitCode = 2;
+} else if (args[0] === "session" && args[1] === "start") {
   if (args.slice(2).some((arg) => /^--(?:distribution|project|runtime)(?:=|$)/.test(arg))) {
     process.stderr.write("The launcher owns the project and distribution binding.\n");
     process.exitCode = 2;
