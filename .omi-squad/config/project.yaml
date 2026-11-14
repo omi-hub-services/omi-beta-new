@@ -25,3 +25,7 @@ policies:
     - deploy
   github_approval_actors:
     - ttin-omihub
+checks:
+  project-check:
+    command: [npm, test]
+    timeout_seconds: 600
