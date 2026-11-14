@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "version": "0.1.0",
-  "artifactHash": "81876f3455b814338a46fd4ee652d2539874c99495ad6b920af48706484caba5",
+  "artifactHash": "449c1671cac4fa919baa43a343192353a96d128afa6646d974c9ab6ac217f0c5",
   "distribution": "Ubuntu-24.04",
   "projectDir": "/home/ttin/beta/omi-beta-new",
   "base": {
